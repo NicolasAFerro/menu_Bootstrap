@@ -159,6 +159,7 @@
                     class="input-text qty text"
                     size="4"
                     pattern=""
+                    id="1"
                     inputmode=""
                   /><input type="button" value="+" class="plus" />
                 </div>
@@ -182,6 +183,7 @@
                     title="Qty"
                     class="input-text qty text"
                     size="4"
+                    id="2"
                     pattern=""
                     inputmode=""
                   /><input type="button" value="+" class="plus" />
@@ -203,6 +205,7 @@
                     max=""
                     name="quantity"
                     value="0"
+                    id="3"
                     title="Qty"
                     class="input-text qty text"
                     size="4"
@@ -238,6 +241,7 @@
                     name="quantity"
                     value="0"
                     title="Qty"
+                    id="4"
                     class="input-text qty text"
                     size="4"
                     pattern=""
@@ -259,6 +263,7 @@
                     step="1"
                     min="1"
                     max=""
+                    id="5"
                     name="quantity"
                     value="0"
                     title="Qty"
@@ -286,6 +291,7 @@
                     name="quantity"
                     value="0"
                     title="Qty"
+                    id="6"
                     class="input-text qty text"
                     size="4"
                     pattern=""
@@ -301,6 +307,7 @@
       <form
         class="shadow-lg p-3 mb-5 bg-body-tertiary rounded-5 mt-5"
         aria-describedby="formHelp"
+        id="formDadosCliente"
       >
         <div class="mb-3">
           <label for="InputNome" class="form-label">Nome</label>
@@ -336,10 +343,32 @@
         </div>
       </form>
     </div>
+
+    <div class="modal fade" tabindex="-1" id="modalResultado">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Resumo do pedido</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              onclick="javascript:window.location.reload()"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="resultadoDoPedido"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
