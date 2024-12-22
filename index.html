@@ -10,6 +10,24 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <!--Dependecias do componente de quantidade-->
+    <link rel="stylesheet" href="style.css" />
+    <script
+      data-require="jquery@3.1.1"
+      data-semver="3.1.1"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+    ></script>
+    <script src="quantity.js"></script>
+
+    <!--mascaras-->
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery.mask.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#InputTelefone").mask("(00) 00000-0000");
+      });
+    </script>
   </head>
   <body class="bg-dark-subtle">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -63,11 +81,11 @@
       </div>
     </nav>
 
-    <div class="container shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+    <div class="container shadow-lg p-5 mb-5 bg-body-tertiary rounded">
       <!--carousel-->
       <div
         id="carouselExampleAutoplaying"
-        class="carousel slide rounded .bg-secondary"
+        class="carousel slide rounded .bg-secondary d-none d-lg-block"
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
@@ -115,7 +133,208 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+      <!--Pratos Principais-->
+      <div class="container shadow-lg p-3 mb-5 bg-body-tertiary rounded-5 mt-5">
+        <div class="row text-center">
+          <h2>Prato Principal</h2>
+          <p>Todos os pratos acompanham arroz, feijão e a sobremesa do dia</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card p-3 rounded-4 text-center">
+              <img src="images/bife.jpg" class="rounded-4" alt="..." />
+              <div class="card-body h-xl-100">
+                <h5 class="card-title">Bife com Batata</h5>
+                <div class="fs-4 fw-bold text-success">R$ 30,00</div>
+                <div class="quantity buttons_added">
+                  <input type="button" value="-" class="minus" /><input
+                    type="number"
+                    step="1"
+                    min="1"
+                    max=""
+                    name="quantity"
+                    value="0"
+                    title="Qty"
+                    class="input-text qty text"
+                    size="4"
+                    pattern=""
+                    inputmode=""
+                  /><input type="button" value="+" class="plus" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card p-3 rounded-4 text-center">
+              <img src="images/coxa.jpg" class="rounded-4" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Coxa de Frango Crocante</h5>
+                <div class="fs-4 fw-bold text-success">R$ 25,00</div>
+                <div class="quantity buttons_added">
+                  <input type="button" value="-" class="minus" /><input
+                    type="number"
+                    step="1"
+                    min="1"
+                    max=""
+                    name="quantity"
+                    value="0"
+                    title="Qty"
+                    class="input-text qty text"
+                    size="4"
+                    pattern=""
+                    inputmode=""
+                  /><input type="button" value="+" class="plus" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card p-3 rounded-4 text-center">
+              <img src="images/panela.jpg" class="rounded-4" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Carne de Panela</h5>
+                <div class="fs-4 fw-bold text-success">R$ 22,00</div>
+                <div class="quantity buttons_added">
+                  <input type="button" value="-" class="minus" /><input
+                    type="number"
+                    step="1"
+                    min="1"
+                    max=""
+                    name="quantity"
+                    value="0"
+                    title="Qty"
+                    class="input-text qty text"
+                    size="4"
+                    pattern=""
+                    inputmode=""
+                  /><input type="button" value="+" class="plus" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Acompanhamentos-->
+      <div class="container shadow-lg p-3 mb-5 bg-body-tertiary rounded-5 mt-5">
+        <div class="row text-center">
+          <h2>Acompanhamentos</h2>
+          <p>Porções para uma pessoa</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card p-3 rounded-4 text-center">
+              <img src="images/farofa.jpg" class="rounded-4" alt="..." />
+              <div class="card-body h-xl-100">
+                <h5 class="card-title">Farofa</h5>
+                <div class="fs-4 fw-bold text-success">R$ 10,00</div>
+                <div class="quantity buttons_added">
+                  <input type="button" value="-" class="minus" /><input
+                    type="number"
+                    step="1"
+                    min="1"
+                    max=""
+                    name="quantity"
+                    value="0"
+                    title="Qty"
+                    class="input-text qty text"
+                    size="4"
+                    pattern=""
+                    inputmode=""
+                  /><input type="button" value="+" class="plus" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card p-3 rounded-4 text-center">
+              <img src="images/salad.jpg" class="rounded-4" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Salada</h5>
+                <div class="fs-4 fw-bold text-success">R$ 8,00</div>
+                <div class="quantity buttons_added">
+                  <input type="button" value="-" class="minus" /><input
+                    type="number"
+                    step="1"
+                    min="1"
+                    max=""
+                    name="quantity"
+                    value="0"
+                    title="Qty"
+                    class="input-text qty text"
+                    size="4"
+                    pattern=""
+                    inputmode=""
+                  /><input type="button" value="+" class="plus" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card p-3 rounded-4 text-center">
+              <img src="images/torresmo.jpg" class="rounded-4" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Torresmo</h5>
+                <div class="fs-4 fw-bold text-success">R$ 12,00</div>
+                <div class="quantity buttons_added">
+                  <input type="button" value="-" class="minus" /><input
+                    type="number"
+                    step="1"
+                    min="1"
+                    max=""
+                    name="quantity"
+                    value="0"
+                    title="Qty"
+                    class="input-text qty text"
+                    size="4"
+                    pattern=""
+                    inputmode=""
+                  /><input type="button" value="+" class="plus" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form
+        class="shadow-lg p-3 mb-5 bg-body-tertiary rounded-5 mt-5"
+        aria-describedby="formHelp"
+      >
+        <div class="mb-3">
+          <label for="InputNome" class="form-label">Nome</label>
+          <input
+            type="text"
+            class="form-control"
+            id="InputNome"
+            placeholder="Digite seu nome"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="InputTelefone" class="form-label">Telefone</label>
+          <input
+            type="text"
+            class="form-control"
+            id="InputTelefone"
+            placeholder="Digite o Telefone"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="InputEmail1" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="InputEmail1"
+            placeholder="emailexemplo@exemplo.com"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Calcular</button>
+        <div id="formHelp" class="form-text">
+          Seus dados não serão compartilhados
+        </div>
+      </form>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
